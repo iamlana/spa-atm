@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
-
 @Component({
   selector: 'app-balance-view',
   templateUrl: './balance-view.component.html',
@@ -8,10 +7,11 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class BalanceViewComponent implements OnInit {
   @Output()
-  balance = new EventEmitter<boolean>();
+  balance = new EventEmitter<void>();
 
   @Output()
-  goBack = new EventEmitter<boolean>();
+  goBack = new EventEmitter<void>();
+
 
   constructor() {}
 

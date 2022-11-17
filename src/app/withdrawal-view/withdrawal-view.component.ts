@@ -8,14 +8,15 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class WithdrawalViewComponent implements OnInit {
   @Output()
-  withdrawal = new EventEmitter<boolean>();
+  withdrawal = new EventEmitter<void>();
 
   @Output()
-  goBack = new EventEmitter<boolean>();
+  goBack = new EventEmitter<void>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
   onWithdrawalView() {
     this.withdrawal.emit();
   }
