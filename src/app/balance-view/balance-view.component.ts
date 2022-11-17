@@ -10,10 +10,18 @@ export class BalanceViewComponent implements OnInit {
   @Output()
   balance = new EventEmitter<boolean>();
 
+  @Output()
+  goBack = new EventEmitter<boolean>();
+
   constructor() {}
 
   ngOnInit(): void {}
+
   onBalanceView() {
     this.balance.emit();
+  }
+
+  onGoBack(){
+    this.goBack.emit()
   }
 }

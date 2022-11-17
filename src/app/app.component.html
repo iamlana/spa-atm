@@ -6,5 +6,11 @@
   (balance)="onBalanceScreen()"
   (withdrawal)="onWithdrawalScreen()"
 ></app-select-operation-view>
-<app-balance-view *ngIf="view === 'balance'"></app-balance-view>
-<app-withdrawal-view *ngIf="view === 'withdrawal'"></app-withdrawal-view>
+<app-balance-view
+  *ngIf="view === 'balance'"
+  (goBack)="onBackToBalance()"
+></app-balance-view>
+<app-withdrawal-view
+  *ngIf="view === 'withdrawal'"
+  (goBack)="onBackToBalance()"
+></app-withdrawal-view>
