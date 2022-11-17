@@ -1,1 +1,2 @@
-<div>SPA_ATM_NVP</div>
+<div>{{ title }}</div>
+<app-pin-view *ngIf="view === 'pin'" (success)="onPinSuccess()"></app-pin-view>

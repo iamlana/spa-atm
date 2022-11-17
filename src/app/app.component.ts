@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'spa-atm';
+  view = 'pin'
+
+  onPinSuccess() {
+    this.view = 'operations'
+    console.log('Success from app')
+  }
 }
