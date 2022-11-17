@@ -24,8 +24,7 @@ export class AppComponent {
     this.view = 'pin';
   }
 
-  onBackToBalance() {
+  onBackToOperations() {
     this.view = 'operations';
-    console.log(this.view)
   }
 }

@@ -8,9 +8,9 @@
 ></app-select-operation-view>
 <app-balance-view
   *ngIf="view === 'balance'"
-  (goBack)="onBackToBalance()"
+  (goBack)="onBackToOperations()"
 ></app-balance-view>
 <app-withdrawal-view
   *ngIf="view === 'withdrawal'"
-  (goBack)="onBackToBalance()"
+  (goBack)="onBackToOperations()"
 ></app-withdrawal-view>
