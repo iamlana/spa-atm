@@ -1,2 +1,10 @@
 <div>{{ title }}</div>
+<div (click)="onExit()">Exit</div>
 <app-pin-view *ngIf="view === 'pin'" (success)="onPinSuccess()"></app-pin-view>
+<app-select-operation-view
+  *ngIf="view === 'operations'"
+  (balance)="onBalanceScreen()"
+  (withdrawal)="onWithdrawalScreen()"
+></app-select-operation-view>
+<app-balance-view *ngIf="view === 'balance'"></app-balance-view>
+<app-withdrawal-view *ngIf="view === 'withdrawal'"></app-withdrawal-view>
