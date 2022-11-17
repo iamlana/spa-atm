@@ -1,0 +1,23 @@
+<p>Welcome to SPA ATM</p>
+<div>
+  <button>Change language</button><br />
+  <form (submit)="onSubmit()">
+    <label for="pin">Enter your PIN: </label>
+    <input
+      id="pin"
+      name="pin"
+      type="password"
+      placeholder="****"
+      min="0000"
+      max="9999"
+      [(ngModel)]="pin"
+      maxlength="4"
+      required
+      title="{{ inputMsg }}"
+      (keypress)="isNumber($event.charCode)"
+    />
+    <input type="submit" value="Submit" [disabled]="block" />
+    <div *ngIf="error">Incorrect PIN</div>
+  </form>
+</div>
+<!-- TODO: translate input title, button, placeholder, value, label, error msg -->
