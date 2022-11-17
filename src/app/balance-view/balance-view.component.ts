@@ -7,21 +7,13 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class BalanceViewComponent implements OnInit {
   @Output()
-  balance = new EventEmitter<void>();
-
-  @Output()
   goBack = new EventEmitter<void>();
-
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onBalanceView() {
-    this.balance.emit();
-  }
-
-  onGoBack(){
-    this.goBack.emit()
+  onGoBack() {
+    this.goBack.emit();
   }
 }
