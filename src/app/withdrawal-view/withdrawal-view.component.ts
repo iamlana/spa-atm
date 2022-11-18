@@ -11,21 +11,20 @@ export class WithdrawalViewComponent implements OnInit {
   @Output()
   goBack = new EventEmitter<void>();
 
-  amount = ''
-  balance = ''
-
-  constructor(
-    private inMemoryDataService: InMemoryDataService
-  ) {}
+  amount = '';
+  constructor(private inMemoryDataService: InMemoryDataService) {}
 
   ngOnInit(): void {}
 
   onGoBack() {
     this.goBack.emit();
   }
-
+  isNumber(charCode: number): boolean {
+    return charCode >= 48 && charCode < 58;
+  }
   onSubmit() {
-    const value = parseInt(this.amount)
-    this.inMemoryDataService.withdraw(value)
+    const value = parseInt(this.amount);
+    this.inMemoryDataService.withdraw(value);
+    this.amount = '';
   }
 }

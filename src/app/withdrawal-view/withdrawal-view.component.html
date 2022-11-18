@@ -1,7 +1,10 @@
 <div class="withdrawalView">
   <h1>Withdraw some cash:</h1>
-  <input type="number" [(ngModel)]="amount" />
-  <p>{{balance}}</p>
+  <input
+    type="number"
+    [(ngModel)]="amount"
+    (keypress)="isNumber($event.charCode)"
+  />
   <div class="buttonsPanel">
     <button type="submit" (click)="onSubmit()">Submit</button>
     <button (click)="onGoBack()">Back</button>
