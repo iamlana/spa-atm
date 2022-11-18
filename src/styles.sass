@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+$font-stack: "Source Sans Pro", sans-serif
+$primary-color: rgb(58, 55, 100)
+$button-color: rgb(75, 109, 211)
+
+*
+  font-family: $font-stack
+  background-color: $primary-color
+  color: white
+  padding: 0
+  margin: 0
+
+button
+  background-color: $button-color
+  border: none
+  padding: 10px 20px 10px 20px
+  font-weight: 600
+  font-size: 20px
+
+input
+  border: none
+  font-size: 40px
+  &:focus
+    border-bottom: solid 2px #ffffff
+    outline: none
+
