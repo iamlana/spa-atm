@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 @Injectable({
   providedIn: 'root',
 })
-export class InMemoryDataService implements InMemoryDbService {
-  createDb() {
-    const balance = 1000;
-    return { balance };
+export class InMemoryDataService {
+  private balance = 12345
+
+  getBalance() {
+    return this.balance
+  }
+
+  withdraw(amount: number) {
+    if (amount > this.balance) {
+      throw new Error('Cannot withdraw')
+    }
+    this.balance -= amount
   }
 }
