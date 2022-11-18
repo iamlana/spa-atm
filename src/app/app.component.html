@@ -1,5 +1,9 @@
-<div>{{ title }}</div>
-<div (click)="onExit()">Exit</div>
+<div class="navigationPanel">
+  <span class="logo logoBlue">spa-<span class="logoWhite">atm</span></span>
+  <div *ngIf="view !== 'pin'" class="exit" (click)="onExit()">
+    <span>Exit</span><i class="material-icons exitIcon">logout</i>
+  </div>
+</div>
 <app-pin-view *ngIf="view === 'pin'" (success)="onPinSuccess()"></app-pin-view>
 <app-select-operation-view
   *ngIf="view === 'operations'"
