@@ -37,6 +37,15 @@ export class PinViewComponent implements OnInit {
       this.error = true;
     }
   }
-
+  printNumber(value: string) {
+    if (this.pin.length >= 4) {
+      return;
+    } else {
+      this.pin += value;
+    }
+  }
+  removeNumber() {
+    this.pin = this.pin.slice(0, this.pin.length - 1);
+  }
   ngOnInit(): void {}
 }

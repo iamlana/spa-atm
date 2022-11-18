@@ -18,5 +18,18 @@
     <input type="submit" value="Submit" [disabled]="block" />
     <div *ngIf="error">Incorrect PIN</div>
   </form>
+  <div class="virtualKeyboard">
+    <button (click)="printNumber('1')" class="numButton">1</button>
+    <button (click)="printNumber('2')" class="numButton">2</button>
+    <button (click)="printNumber('3')" class="numButton">3</button>
+    <button (click)="printNumber('4')" class="numButton">4</button>
+    <button (click)="printNumber('5')" class="numButton">5</button>
+    <button (click)="printNumber('6')" class="numButton">6</button>
+    <button (click)="printNumber('7')" class="numButton">7</button>
+    <button (click)="printNumber('8')" class="numButton">8</button>
+    <button (click)="printNumber('9')" class="numButton">9</button>
+    <button (click)="removeNumber()" class="backspaceButton"><i class="material-icons">backspace </i></button>
+    <button (click)="printNumber('0')" class="numButton">0</button>
+  </div>
 </div>
 <!-- TODO: translate input title, button, placeholder, value, label, error msg -->

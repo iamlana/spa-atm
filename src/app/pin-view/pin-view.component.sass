@@ -1,11 +1,12 @@
 .autentificationScreen
   display: flex
-  flex-direction: column
+  flex-direction: row
   align-items: center
   text-align: center
+  justify-content: space-evenly
 
 .welcome
-  padding: 20px 0 0 0
+  padding: 20px 0
   display: block
   text-align: center
   font-size: 40px
@@ -27,3 +28,32 @@ input[type='submit']
   margin: 40px 0
   border-radius: 20px
   font-weight: 600
+
+.virtualKeyboard
+  display: grid
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+  gap: 10px
+
+
+.numButton, .backspaceButton
+  border-radius: 10px
+  border: none
+
+.numButton
+  grid-column: span 1 / span 1
+  border: 1px solid transparent
+  &:hover
+    border: 1px solid white
+
+.backspaceButton
+  display: flex
+  justify-content: center
+  grid-column: span 2 / span 1
+  border: 1px solid transparent
+  &:hover
+    border: 1px solid white
+
+.material-icons
+  background-color: rgb(75, 109, 211)
+
+
