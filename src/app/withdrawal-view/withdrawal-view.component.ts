@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
+import { InMemoryDataService } from '../in-memory-data.service';
 
 @Component({
   selector: 'app-withdrawal-view',
@@ -10,11 +11,21 @@ export class WithdrawalViewComponent implements OnInit {
   @Output()
   goBack = new EventEmitter<void>();
 
-  constructor() {}
+  amount = ''
+  balance = ''
+
+  constructor(
+    private inMemoryDataService: InMemoryDataService
+  ) {}
 
   ngOnInit(): void {}
 
   onGoBack() {
     this.goBack.emit();
+  }
+
+  onSubmit() {
+    const value = parseInt(this.amount)
+    this.inMemoryDataService.withdraw(value)
   }
 }

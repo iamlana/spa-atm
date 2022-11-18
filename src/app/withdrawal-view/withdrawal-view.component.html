@@ -1,4 +1,9 @@
-<p>Withdraw some cash</p>
-<input type="number"/>
-<button type="submit">Submit</button>
-<button (click)="onGoBack()">Back</button>
+<div class="withdrawalView">
+  <h1>Withdraw some cash:</h1>
+  <input type="number" [(ngModel)]="amount" />
+  <p>{{balance}}</p>
+  <div class="buttonsPanel">
+    <button type="submit" (click)="onSubmit()">Submit</button>
+    <button (click)="onGoBack()">Back</button>
+  </div>
+</div>
